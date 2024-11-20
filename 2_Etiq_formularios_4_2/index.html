@@ -1,71 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etiquetas de contenido</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <!-- Elemento <p> -->
-<p id="texto_especial">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia beatae aliquam non natus aut id sint ea? Natus tempore hic reprehenderit temporibus minima nisi, quia, magnam omnis, officiis molestiae earum.</p>
-<p id="texto_especial">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia beatae aliquam non natus aut id sint ea? Natus tempore hic reprehenderit temporibus minima nisi, quia, magnam omnis, officiis molestiae earum.</p>
+<form>
+  <fieldset>
+      <legend>Datos personales</legend>
+      <label for="nombre">Nombre y apellidos: </label>
+      <input id="nombre" type="text"><br>
 
-<!-- Elemento <hr> -->
-<hr>
+      <label for="sexo">Sexo: </label>
+      <select id="sexo">
+          <!--Etiqueta option-->
+          <option value="value1">Hombre</option> 
+          <option value="value2" selected>Mujer</option>
+      </select><br><br>
 
-<!-- Elemento <pre> -->
-<pre>Contenido preformateado       Conserva los espacios,
-            los saltos de línea y los tabuladores del texto original.
-        </pre>
+      <label>Edad: </label>
+      <input type="checkbox" value="20-39"> 20-39
+      <input type="checkbox" value="40-59"> 40-59
+      <input type="checkbox" value="60-79"> 60-79<br><br>
 
-<!-- Elemento <blockquote> -->
-<blockquote>Con blockquote representamos un contenido citado desde otra fuente.</blockquote>
+      <label for="email">Email: </label>
+      <input id="email" type="email"><br><br>
 
-<!-- Elemento <ol> -->
-<ol>
-  <li class="rojo_negrita">Lista ordenada</li>
-  <li>Lista ordenada</li>
-  <li>Lista ordenada</li>
-</ol>
-<ol type="A" start="3">
-    <li class="rojo_negrita">Lista ordenada</li>
-    <li>Lista ordenada</li>
-    <li>Lista ordenada</li>
-  </ol>
+      <label for="estudios">Estudios: </label>
+      <select id="estudios">
+         <optgroup label="Estudios Universitarios">
+            <option>Doctorado</option>
+            <option>Máster</option>
+            <option>Grado</option>
+         </optgroup>
+         <optgroup label="Ciclo Formativo">
+            <option>Grado Superior</option>
+            <option>Grado Medio</option>
+         </optgroup>
+      </select><br><br>
 
-<!-- Elemento <ul> -->
-<ul>
-  <li>Lista sin orden</li>
-  <li>Lista sin orden</li>
-  <li>Lista sin orden</li>
-</ul>
-<ul type="square">
-    <li>Lista sin orden</li>
-    <li>Lista sin orden</li>
-    <li>Lista sin orden</li>
-  </ul>
+    <label for="navegador">Elige tu navegador favorito: </label>
+    <input id="navegador" list="browsers">
+      <datalist id="browsers">
+          <option value="Chrome">
+          <option value="Firefox">
+          <option value="Internet Explorer">
+          <option value="Opera">
+          <option value="Safari">
+          <option value="Microsoft Edge">
+      </datalist><br><br>
 
-<!-- Elementos <dl> <dt> <dd>-->
-<dl>
-  <dt>Término 1</dt>
-  <dd>Definición del término 1.</dd>
-
-  <dt>Término 2</dt>
-  <dd>Definición del término 2.</dd>
-
-  <dt>Término 3</dt>
-  <dd>Definición del término 3.</dd>
-</dl>
-
-<!-- Elementos <figure> y <figurecaption>-->
-<figure>
-  <img src="https://www.eniun.com/wp-content/uploads/eniun-icon-user-experience.svg"
-       alt="Usabilidad">
-  <figcaption>Figura 1</figcaption>
-</figure>
-
-<!-- Elemento <div>-->
-<div>Contenedor tipo div</div> 
-</body>
-</html>
+      <label for="mensaje">Escribe tu mensaje: </label>
+      <textarea rows="10" cols="50" placeholder="Mensaje" id="mensaje"></textarea>
+  </fieldset>  
+  <input type="submit" value="Enviar">
+</form>
